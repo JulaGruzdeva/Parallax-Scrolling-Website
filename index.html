@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MoonLight</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+    </header>
+    <section>
+        <img src="img/stars.png" id="stars">
+        <img src="img/moon.png" id="moon">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="img/mountains_behind.png" id="mountains_behind">
+        <img src="img/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Vulputate mattis dictumst. 
+            Consectetur cras lorem sodales velit quam, et. 
+            Dictum cursus in dictum quis, ornare ex. 
+            Augue nunc augue lacinia imperdiet sit ut. 
+            Lorem amet est. Vulputate pulvinar ornare sit hac dolor libero, dictum justo faucibus. 
+            Ultricies. Sit mollis accumsan malesuada ornare lacinia hac accumsan amet, cras amet, sed justo dictum. Leo, accumsan dapibus morbi vel accumsan molestie in ex. 
+            Arcu pellentesque justo vulputate dictumst. <br><br>Vulputate mattis dictumst. 
+            Consectetur cras lorem sodales velit quam, et. 
+            Dictum cursus in dictum quis, ornare ex. 
+            Augue nunc augue lacinia imperdiet sit ut. 
+            Lorem amet est. Vulputate pulvinar ornare sit hac dolor libero, dictum justo faucibus. 
+            Ultricies. Sit mollis accumsan malesuada ornare lacinia hac accumsan amet, cras amet, sed justo dictum. Leo, accumsan dapibus morbi vel accumsan molestie in ex. 
+            Arcu pellentesque justo vulputate dictumst
+            Sed aenean sed vestibulum in tempus vel amet, ipsum molestie tortor, non quis, nisi dui sit nunc vel sit hac non lacinia cursus sed et morbi arcu malesuada ipsum imperdiet id velit nulla dictum.
+            <br><br>Vulputate mattis dictumst. 
+            Consectetur cras lorem sodales velit quam, et. 
+            Dictum cursus in dictum quis, ornare ex. 
+            Augue nunc augue lacinia imperdiet sit ut. 
+            Lorem amet est. Vulputate pulvinar ornare sit hac dolor libero, dictum justo faucibus. 
+            Ultricies. Sit mollis accumsan malesuada ornare lacinia hac accumsan amet, cras amet, sed justo dictum. Leo, accumsan dapibus morbi vel accumsan molestie in ex. 
+            Arcu pellentesque justo vulputate dictumst
+            Sed aenean sed vestibulum in tempus vel amet, ipsum molestie tortor, non quis, nisi dui sit nunc vel sit hac non lacinia cursus sed et morbi arcu malesuada ipsum imperdiet id velit nulla dictum.
+            <br><br>Vulputate mattis dictumst. 
+            Consectetur cras lorem sodales velit quam, et. 
+            Dictum cursus in dictum quis, ornare ex. 
+            Augue nunc augue lacinia imperdiet sit ut. 
+            Lorem amet est. Vulputate pulvinar ornare sit hac dolor libero, dictum justo faucibus. 
+            Ultricies. Sit mollis accumsan malesuada ornare lacinia hac accumsan amet, cras amet, sed justo dictum. Leo, accumsan dapibus morbi vel accumsan molestie in ex. 
+            Arcu pellentesque justo vulputate dictumst
+            Sed aenean sed vestibulum in tempus vel amet, ipsum molestie tortor, non quis, nisi dui sit nunc vel sit hac non lacinia cursus sed et morbi arcu malesuada ipsum imperdiet id velit nulla dictum.
+            <br><br>Vulputate mattis dictumst. 
+            Consectetur cras lorem sodales velit quam, et. 
+            Dictum cursus in dictum quis, ornare ex. 
+            Augue nunc augue lacinia imperdiet sit ut. 
+            Lorem amet est. Vulputate pulvinar ornare sit hac dolor libero, dictum justo faucibus. 
+            Ultricies. Sit mollis accumsan malesuada ornare lacinia hac accumsan amet, cras amet, sed justo dictum. Leo, accumsan dapibus morbi vel accumsan molestie in ex. 
+            Arcu pellentesque justo vulputate dictumst
+            Sed aenean sed vestibulum in tempus vel amet, ipsum molestie tortor, non quis, nisi dui sit nunc vel sit hac non lacinia cursus sed et morbi arcu malesuada ipsum imperdiet id velit nulla dictum.
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let btn = document.getElementById('btn');
+        let text = document.getElementById('text');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value*0.25 + 'px';
+            moon.style.top = value*1.05 + 'px';
+            mountains_behind.style.top = value*0.5 + 'px';
+            mountains_front.style.top = value*0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+        })    
+
+
+    </script>    
+</body>
+</html>
